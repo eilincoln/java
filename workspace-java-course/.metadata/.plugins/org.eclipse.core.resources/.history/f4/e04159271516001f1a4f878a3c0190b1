@@ -1,0 +1,12 @@
+package executable.javacourse;
+
+public class TrabalhandoComChar {
+
+	public static void main(String[] args) {
+		
+		// CHAR representa somente uma letra
+		char pessoaFeminino = 'F'; //tem que ser com aspas simples e não pode ser com duplas
+		
+		System.out.println("Qual o genêro da pessoa? " + pessoaFeminino);
+	}
+}
