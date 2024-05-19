@@ -1,0 +1,6 @@
+Java Virtual Machine (JVM)
+
+	É o que transforma nosso código em código .class que é os nossos binários.
+	- Ele vai compitar nosso código para podermos usar em qualquer lugar, sendo em qualquer SO
+	não tem problema, será gerado um byte code.class que será interpretado.
+	
