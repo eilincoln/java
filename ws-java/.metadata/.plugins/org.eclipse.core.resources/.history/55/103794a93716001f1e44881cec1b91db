@@ -1,0 +1,7 @@
+package operacoesLogicas;
+
+public class TesteSozinhoDialogo {
+	public static void main(String[] args) {
+		
+	}
+}
