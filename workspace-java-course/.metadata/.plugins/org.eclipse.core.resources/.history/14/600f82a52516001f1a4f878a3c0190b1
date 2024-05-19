@@ -1,0 +1,13 @@
+package operacoesLogicasECondicionais;
+
+public class IfEElse {
+	public static void main(String[] args) {
+		int mediaAluno = 7;
+		
+		if(mediaAluno >= 70) {
+			System.out.println("APROVADO");
+		} else {
+			System.out.println("REPROVADO");
+		}
+	}
+}
