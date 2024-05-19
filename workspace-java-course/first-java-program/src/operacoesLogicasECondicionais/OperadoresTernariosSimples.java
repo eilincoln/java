@@ -1,0 +1,13 @@
+package operacoesLogicasECondicionais;
+
+public class OperadoresTernariosSimples {
+	public static void main(String[] args) {
+		//operadores são para micro validações. são coisa bem simples
+		
+		double media = 7;
+		
+		String saidaResultado = media >= 7 ? "Aprovado" : "Reprovado";
+		
+		System.out.println(saidaResultado);
+	}
+}
