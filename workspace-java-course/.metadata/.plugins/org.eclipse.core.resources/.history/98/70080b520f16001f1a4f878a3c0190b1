@@ -1,0 +1,7 @@
+package executable.javacourse;
+
+public class FazendoOperacoesEntreNumerosInteiros {
+	public static void main(String[] args) {
+		
+	}
+}
