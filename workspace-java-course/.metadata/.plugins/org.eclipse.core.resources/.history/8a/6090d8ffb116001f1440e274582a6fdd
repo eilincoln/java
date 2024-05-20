@@ -15,12 +15,10 @@ public class CriandoAluno {
 		aluno1.nomeMae = "Gisele Semiano dos Santos";
 		aluno1.ra = 24249777;
 		
-		System.out.println("O nome da mãe do aluno: " + aluno1.nomeMae);
+		System.out.println(aluno1);
 		
 		Aluno aluno2 = new Aluno("Lincoln"); //criado com 1 parâmetro
-		aluno2.idade = 22;
 		
 		Aluno aluno3 = new Aluno("Lincoln2", 25); // Criando com 2 parâmetros
-		aluno3.nomeMae = "Fabiana Semiano dos Santos";
 	}
 }

@@ -2,12 +2,11 @@ package classes.javacourse;
 
 public class Aluno {
 	
-	/*tudo isso é um atributo do objeto aluno*/
-	public String nome;
-	public int idade;
-	public String curso;
-	public int ra;
-	public String nomeMae;
+	String nome;
+	int idade;
+	String curso;
+	int ra;
+	String nomeMae;
 	
 	public Aluno() { // crio um objeto vazio
 	}

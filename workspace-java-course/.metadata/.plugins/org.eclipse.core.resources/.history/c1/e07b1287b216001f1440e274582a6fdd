@@ -21,6 +21,6 @@ public class CriandoAluno {
 		aluno2.idade = 22;
 		
 		Aluno aluno3 = new Aluno("Lincoln2", 25); // Criando com 2 parâmetros
-		aluno3.nomeMae = "Fabiana Semiano dos Santos";
+//		aluno3.nomeMae = "Fabiana Semiano dos Santos";
 	}
 }
