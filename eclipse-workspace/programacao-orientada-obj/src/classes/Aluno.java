@@ -6,46 +6,23 @@ public class Aluno {
 	public String curso;
 	public String nomeMae;
 	
-	private double nota1;
-	private double nota2;
-	private double nota3;
-	private double nota4;
+	private Disciplina disciplina = new Disciplina(); 
 	
+	public void setDisciplina(Disciplina disciplina) {
+		this.disciplina = disciplina;
+	}
 	
-	public double getNota1() {
-		return nota1;
+	public Disciplina getDisciplina() {
+		return disciplina;
 	}
 
-	public void setNota1(double nota1) {
-		this.nota1 = nota1;
-	}
-
-	public double getNota2() {
-		return nota2;
-	}
-
-	public void setNota2(double nota2) {
-		this.nota2 = nota2;
-	}
-
-	public double getNota3() {
-		return nota3;
-	}
-
-	public void setNota3(double nota3) {
-		this.nota3 = nota3;
-	}
-
-	public double getNota4() {
-		return nota4;
-	}
-
-	public void setNota4(double nota4) {
-		this.nota4 = nota4;
-	}
 
 	public Aluno () {
 		
+	}
+	
+	public Aluno(String nomePadrao) {
+		nome = nomePadrao;
 	}
 	
 	public Aluno (String nomePadrao, int raPadrao) {
@@ -92,7 +69,8 @@ public class Aluno {
 	
 	// quando eu tenho tudo assim facil, eu posso fazer aqui direto! Não preciso mandar para outra parte do sistema
 	public double getMediaNota() {
-		return (nota1 + nota2 + nota3 + nota4) / 4;
+		return (disciplina.getNota1() + disciplina.getNota2()
+				+ disciplina.getNota3() + disciplina.getNota4()) / 4;
 	}
 	
 	public boolean getAlunoAprovado() {
@@ -113,4 +91,42 @@ public class Aluno {
 			return "Aluno reprovado";
 		}
 	}
+	
+	
+
+	@Override
+	public String toString() {
+		return "Aluno [nome=" + nome + ", ra=" + ra + ", curso=" + curso + ", nomeMae=" + nomeMae + ", disciplina="
+				+ disciplina + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
+		result = prime * result + ra;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Aluno other = (Aluno) obj;
+		if (nome == null) {
+			if (other.nome != null)
+				return false;
+		} else if (!nome.equals(other.nome))
+			return false;
+		if (ra != other.ra)
+			return false;
+		return true;
+	}
+	
+	
 }
