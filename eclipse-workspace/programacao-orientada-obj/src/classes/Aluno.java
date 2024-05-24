@@ -1,21 +1,23 @@
 package classes;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Aluno {
 	public String nome;
 	public int ra;
 	public String curso;
 	public String nomeMae;
 	
-	private Disciplina disciplina = new Disciplina(); 
+	private List<Disciplina> disciplinas = new ArrayList<Disciplina>(); 
 	
-	public void setDisciplina(Disciplina disciplina) {
-		this.disciplina = disciplina;
+	public void setDisciplina(List<Disciplina> disciplina) {
+		this.disciplinas = disciplina;
 	}
 	
-	public Disciplina getDisciplina() {
-		return disciplina;
+	public List<Disciplina> getDisciplina() {
+		return disciplinas;
 	}
-
 
 	public Aluno () {
 		
@@ -69,8 +71,11 @@ public class Aluno {
 	
 	// quando eu tenho tudo assim facil, eu posso fazer aqui direto! Não preciso mandar para outra parte do sistema
 	public double getMediaNota() {
-		return (disciplina.getNota1() + disciplina.getNota2()
-				+ disciplina.getNota3() + disciplina.getNota4()) / 4;
+		double somaNotas = 0.0;
+		for (Disciplina disciplina : disciplinas) {
+			somaNotas = somaNotas + disciplina.getNota();
+		}
+		return somaNotas / disciplinas.size();
 	}
 	
 	public boolean getAlunoAprovado() {
@@ -97,7 +102,7 @@ public class Aluno {
 	@Override
 	public String toString() {
 		return "Aluno [nome=" + nome + ", ra=" + ra + ", curso=" + curso + ", nomeMae=" + nomeMae + ", disciplina="
-				+ disciplina + "]";
+				+ disciplinas + "]";
 	}
 
 	@Override
