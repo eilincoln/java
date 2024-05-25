@@ -6,15 +6,6 @@ public class Aluno {
 	private String curso;
 	private int ra;
 
-	private Materia materia = new Materia();
-
-	public Materia getMateria() {
-		return materia;
-	}
-
-	public void setMateria(Materia materia) {
-		this.materia = materia;
-	}
 
 	public Aluno() {
 		// TODO Auto-generated constructor stub
@@ -54,9 +45,9 @@ public class Aluno {
 
 	
 	
-	public double getMediaAluno() {
-		return (materia.getNota1() + materia.getNota2() + materia.getNota3() + materia.getNota4()) / 4;
-	}
+//	public double getMediaAluno() {
+//		return (nota1 + nota2 + nota3 + nota4) / 4;
+//	}
 	
 	public boolean getAlunoAprovado() {
 		double media = this.getMediaAluno();
@@ -67,10 +58,13 @@ public class Aluno {
 		}
 	}
 
+	
+
+	
+
 	@Override
 	public String toString() {
-		return "Aluno [nome=" + nome + ", idade=" + idade + ", curso=" + curso + ", ra=" + ra + ", materia=" + materia
-				+ "]";
+		return "Aluno [nome=" + nome + ", idade=" + idade + ", curso=" + curso + ", ra=" + ra + "]";
 	}
 
 	@Override

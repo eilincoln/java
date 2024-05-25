@@ -7,6 +7,8 @@ public class Aluno {
 	private int ra;
 
 	private Materia materia = new Materia();
+	
+	
 
 	public Materia getMateria() {
 		return materia;
@@ -67,10 +69,13 @@ public class Aluno {
 		}
 	}
 
+	
+
+	
+
 	@Override
 	public String toString() {
-		return "Aluno [nome=" + nome + ", idade=" + idade + ", curso=" + curso + ", ra=" + ra + ", materia=" + materia
-				+ "]";
+		return "Aluno [nome=" + nome + ", idade=" + idade + ", curso=" + curso + ", ra=" + ra + "]";
 	}
 
 	@Override

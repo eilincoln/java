@@ -37,11 +37,9 @@ public class MetodoExecutavel {
 		aluno.getMateria().setNota3(nota3);
 		aluno.getMateria().setNota4(nota4);
 		
-		aluno.getMateria().setMateria1(materia1);
-		aluno.getMateria().setMateria2(materia2);
-		aluno.getMateria().setMateria3(materia3);
-		aluno.getMateria().setMateria4(materia4);
-		
+		aluno.setMateria1(materia2);
+		aluno.setMateria1(materia3);
+		aluno.setMateria1(materia4);
 		
 		//Saída dos dados
 		System.out.println("Nome: " + aluno.getNome());

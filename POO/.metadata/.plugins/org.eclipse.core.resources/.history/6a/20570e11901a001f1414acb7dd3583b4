@@ -1,0 +1,12 @@
+package classes;
+
+public class Materias {
+	private double nota1;
+	private String materia1;
+	private double nota2;
+	private String materia2;
+	private double nota3;
+	private String materia3;
+	private double nota4;
+	private String materia4;
+}

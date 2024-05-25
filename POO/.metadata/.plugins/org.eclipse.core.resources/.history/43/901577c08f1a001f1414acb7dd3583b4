@@ -1,0 +1,171 @@
+package classes;
+
+public class Aluno {
+	private String nome;
+	private int idade;
+	private String curso;
+	private int ra;
+	
+	private double nota1;
+	private String materia1;
+	private double nota2;
+	private String materia2;
+	private double nota3;
+	private String materia3;
+	private double nota4;
+	private String materia4;
+	
+	
+	
+	public String getMateria1() {
+		return materia1;
+	}
+
+	public void setMateria1(String materia1) {
+		this.materia1 = materia1;
+	}
+
+	public String getMateria2() {
+		return materia2;
+	}
+
+	public void setMateria2(String materia2) {
+		this.materia2 = materia2;
+	}
+
+	public String getMateria3() {
+		return materia3;
+	}
+
+	public void setMateria3(String materia3) {
+		this.materia3 = materia3;
+	}
+
+	public String getMateria4() {
+		return materia4;
+	}
+
+	public void setMateria4(String materia4) {
+		this.materia4 = materia4;
+	}
+
+	public Aluno() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public int getIdade() {
+		return idade;
+	}
+
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+
+	public String getCurso() {
+		return curso;
+	}
+
+	public void setCurso(String curso) {
+		this.curso = curso;
+	}
+
+	public int getRa() {
+		return ra;
+	}
+
+	public void setRa(int ra) {
+		this.ra = ra;
+	}
+
+	public double getNota1() {
+		return nota1;
+	}
+
+	public void setNota1(double nota1) {
+		this.nota1 = nota1;
+	}
+
+	public double getNota2() {
+		return nota2;
+	}
+
+	public void setNota2(double nota2) {
+		this.nota2 = nota2;
+	}
+
+	public double getNota3() {
+		return nota3;
+	}
+
+	public void setNota3(double nota3) {
+		this.nota3 = nota3;
+	}
+
+	public double getNota4() {
+		return nota4;
+	}
+
+	public void setNota4(double nota4) {
+		this.nota4 = nota4;
+	}
+	
+	public double getMediaAluno() {
+		return (nota1 + nota2 + nota3 + nota4) / 4;
+	}
+	
+	public boolean getAlunoAprovado() {
+		double media = this.getMediaAluno();
+		if(media >= 7) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	
+
+	
+
+	@Override
+	public String toString() {
+		return "Aluno [nome=" + nome + ", idade=" + idade + ", curso=" + curso + ", ra=" + ra + ", nota1=" + nota1
+				+ ", materia1=" + materia1 + ", nota2=" + nota2 + ", materia2=" + materia2 + ", nota3=" + nota3
+				+ ", materia3=" + materia3 + ", nota4=" + nota4 + ", materia4=" + materia4 + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Aluno other = (Aluno) obj;
+		if (nome == null) {
+			if (other.nome != null)
+				return false;
+		} else if (!nome.equals(other.nome))
+			return false;
+		return true;
+	}
+	
+	
+	
+}

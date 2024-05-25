@@ -6,15 +6,6 @@ public class Aluno {
 	private String curso;
 	private int ra;
 
-	private Materia materia = new Materia();
-
-	public Materia getMateria() {
-		return materia;
-	}
-
-	public void setMateria(Materia materia) {
-		this.materia = materia;
-	}
 
 	public Aluno() {
 		// TODO Auto-generated constructor stub
@@ -52,10 +43,40 @@ public class Aluno {
 		this.ra = ra;
 	}
 
-	
+	public double getNota1() {
+		return nota1;
+	}
+
+	public void setNota1(double nota1) {
+		this.nota1 = nota1;
+	}
+
+	public double getNota2() {
+		return nota2;
+	}
+
+	public void setNota2(double nota2) {
+		this.nota2 = nota2;
+	}
+
+	public double getNota3() {
+		return nota3;
+	}
+
+	public void setNota3(double nota3) {
+		this.nota3 = nota3;
+	}
+
+	public double getNota4() {
+		return nota4;
+	}
+
+	public void setNota4(double nota4) {
+		this.nota4 = nota4;
+	}
 	
 	public double getMediaAluno() {
-		return (materia.getNota1() + materia.getNota2() + materia.getNota3() + materia.getNota4()) / 4;
+		return (nota1 + nota2 + nota3 + nota4) / 4;
 	}
 	
 	public boolean getAlunoAprovado() {
@@ -67,10 +88,15 @@ public class Aluno {
 		}
 	}
 
+	
+
+	
+
 	@Override
 	public String toString() {
-		return "Aluno [nome=" + nome + ", idade=" + idade + ", curso=" + curso + ", ra=" + ra + ", materia=" + materia
-				+ "]";
+		return "Aluno [nome=" + nome + ", idade=" + idade + ", curso=" + curso + ", ra=" + ra + ", nota1=" + nota1
+				+ ", materia1=" + materia1 + ", nota2=" + nota2 + ", materia2=" + materia2 + ", nota3=" + nota3
+				+ ", materia3=" + materia3 + ", nota4=" + nota4 + ", materia4=" + materia4 + "]";
 	}
 
 	@Override

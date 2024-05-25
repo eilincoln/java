@@ -6,7 +6,7 @@ import classes.Aluno;
 
 public class MetodoExecutavel {
 	public static void main(String[] args) {
-		//Criação do objeto do aluno
+		/*//Criação do objeto do aluno
 		Aluno aluno = new Aluno();
 		
 		//Entrada de dados do aluno
@@ -14,34 +14,19 @@ public class MetodoExecutavel {
 		int idade = Integer.parseInt(JOptionPane.showInputDialog("Qual a idade do aluno: "));
 		String curso = JOptionPane.showInputDialog("Qual o curso do aluno: ");
 		int ra = Integer.parseInt(JOptionPane.showInputDialog("Qual é o ra do aluno: "));
-		
-		String materia1 = JOptionPane.showInputDialog("Qual materia: ");
 		double nota1 = Double.parseDouble(JOptionPane.showInputDialog("NOTA 1: "));
-
-		String materia2 = JOptionPane.showInputDialog("Qual materia: ");
 		double nota2 = Double.parseDouble(JOptionPane.showInputDialog("NOTA 2: "));
-		
-		String materia3 = JOptionPane.showInputDialog("Qual materia: ");
 		double nota3 = Double.parseDouble(JOptionPane.showInputDialog("NOTA 3: "));
-		
-		String materia4 = JOptionPane.showInputDialog("Qual materia: ");
 		double nota4 = Double.parseDouble(JOptionPane.showInputDialog("NOTA 4: "));
 		
 		aluno.setNome(nome);
 		aluno.setIdade(idade);
 		aluno.setCurso(curso);
 		aluno.setRa(ra);
-		
-		aluno.getMateria().setNota1(nota1);
-		aluno.getMateria().setNota2(nota2);
-		aluno.getMateria().setNota3(nota3);
-		aluno.getMateria().setNota4(nota4);
-		
-		aluno.getMateria().setMateria1(materia1);
-		aluno.getMateria().setMateria2(materia2);
-		aluno.getMateria().setMateria3(materia3);
-		aluno.getMateria().setMateria4(materia4);
-		
+		aluno.setNota1(nota1);
+		aluno.setNota2(nota2);
+		aluno.setNota3(nota3);
+		aluno.setNota4(nota4);
 		
 		//Saída dos dados
 		System.out.println("Nome: " + aluno.getNome());
@@ -51,8 +36,19 @@ public class MetodoExecutavel {
 		System.out.println("Situção: " + (aluno.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
 		System.out.println("Media aluno: " + aluno.getMediaAluno());
 		System.out.println("------------------------------------------------------------------");
-		System.out.println(aluno); 
+		System.out.println(aluno); */
 		
+		Aluno aluno1 = new Aluno();
+		aluno1.setNome("Lincoln");
+		
+		Aluno aluno2 = new Aluno();
+		aluno2.setNome("Lincoln");
+		
+		if(aluno1.equals(aluno2)) {
+			System.out.println("IGUAIS");
+		} else {
+			System.out.println("DIFERENTES");
+		}
 		
 	}
 }
