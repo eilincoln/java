@@ -3,6 +3,8 @@ package classes;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.sun.tools.javac.code.Type.ForAll;
+
 public class Aluno {
 	private String nome;
 	private int idade;
@@ -62,20 +64,18 @@ public class Aluno {
 		
 		double somaNotas = 0.0;
 		for (Materia materia : materias) {
-			somaNotas = somaNotas +  materia.getNota();
+			somaNotas += materia.getNota();
 		}
 		
 		return somaNotas / materias.size();
 	}
 	
-	public String getAlunoAprovado() {
+	public boolean getAlunoAprovado() {
 		double media = this.getMediaAluno();
 		if(media >= 7) {
-			return "Aluno aprovado";
-		} else if(media >= 5 && media < 7) {
-			return "Aluno em recuperação";
+			return true;
 		} else {
-			return "Reprovado";
+			return false;
 		}
 	}
 

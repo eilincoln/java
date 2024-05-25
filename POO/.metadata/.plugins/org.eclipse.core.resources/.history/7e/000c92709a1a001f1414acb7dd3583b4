@@ -68,14 +68,12 @@ public class Aluno {
 		return somaNotas / materias.size();
 	}
 	
-	public String getAlunoAprovado() {
+	public boolean getAlunoAprovado() {
 		double media = this.getMediaAluno();
 		if(media >= 7) {
-			return "Aluno aprovado";
-		} else if(media >= 5 && media < 7) {
-			return "Aluno em recuperação";
+			return true;
 		} else {
-			return "Reprovado";
+			return false;
 		}
 	}
 

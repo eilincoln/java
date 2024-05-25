@@ -34,7 +34,6 @@ public class MetodoExecutavel {
 			aluno.getMaterias().add(materia);
 		}
 		
-		//Remover materia
 		int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma matéria ?");
 		if (escolha == 0) {
 			String materiaRemover = JOptionPane.showInputDialog("Qual a materia? entre as 4");

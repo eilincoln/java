@@ -1,0 +1,76 @@
+package metodoExecutavel;
+
+import javax.swing.JOptionPane;
+
+import classes.Aluno;
+import classes.Materia;
+
+public class MetodoExecutavel {
+	public static void main(String[] args) {
+		//Criação do objeto do aluno
+		Aluno aluno = new Aluno();
+		
+		//Entrada de dados do aluno
+		String nome = JOptionPane.showInputDialog("Qual o nome do aluno: ");
+		int idade = Integer.parseInt(JOptionPane.showInputDialog("Qual a idade do aluno: "));
+		String curso = JOptionPane.showInputDialog("Qual o curso do aluno: ");
+		int ra = Integer.parseInt(JOptionPane.showInputDialog("Qual é o ra do aluno: "));
+		
+		String materia1 = JOptionPane.showInputDialog("Qual materia: ");
+		double nota1 = Double.parseDouble(JOptionPane.showInputDialog("NOTA 1: "));
+
+		String materia2 = JOptionPane.showInputDialog("Qual materia: ");
+		double nota2 = Double.parseDouble(JOptionPane.showInputDialog("NOTA 2: "));
+		
+		String materia3 = JOptionPane.showInputDialog("Qual materia: ");
+		double nota3 = Double.parseDouble(JOptionPane.showInputDialog("NOTA 3: "));
+		
+		String materia4 = JOptionPane.showInputDialog("Qual materia: ");
+		double nota4 = Double.parseDouble(JOptionPane.showInputDialog("NOTA 4: "));
+		
+		aluno.setNome(nome);
+		aluno.setIdade(idade);
+		aluno.setCurso(curso);
+		aluno.setRa(ra);
+		
+		Materia materia01 = new Materia();
+		materia01.setMateria("Banco de Dados");
+		materia01.setNota(9);
+		
+		aluno.getMaterias().add(materia01);
+		
+		Materia materia02 = new Materia();
+		materia01.setMateria("HTML");
+		materia01.setNota(8);
+		
+		aluno.getMaterias().add(materia02);
+		
+		Materia materia03 = new Materia();
+		materia03.setMateria("CSS");
+		materia03.setNota(7);
+		
+		aluno.getMaterias().add(materia03);
+		
+		Materia materia04 = new Materia();
+		materia03.setMateria("JAVA");
+		materia03.setNota(6);
+		
+		aluno.getMaterias().add(materia04);
+		
+		
+		
+		
+		
+		//Saída dos dados
+		System.out.println("Nome: " + aluno.getNome());
+		System.out.println("Idade: " + aluno.getIdade());
+		System.out.println("Curso: " + aluno.getCurso());
+		System.out.println("RA: " + aluno.getRa());
+		System.out.println("Situção: " + (aluno.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
+		System.out.println("Media aluno: " + aluno.getMediaAluno());
+		System.out.println("------------------------------------------------------------------");
+		System.out.println(aluno); 
+		
+		
+	}
+}

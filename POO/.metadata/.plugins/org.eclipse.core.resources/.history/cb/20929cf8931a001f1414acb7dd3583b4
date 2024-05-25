@@ -3,50 +3,44 @@ package metodoExecutavel;
 import javax.swing.JOptionPane;
 
 import classes.Aluno;
-import classes.Materia;
 
 public class MetodoExecutavel {
 	public static void main(String[] args) {
+		//Criação do objeto do aluno
+		Aluno aluno = new Aluno();
 		
 		//Entrada de dados do aluno
 		String nome = JOptionPane.showInputDialog("Qual o nome do aluno: ");
 		int idade = Integer.parseInt(JOptionPane.showInputDialog("Qual a idade do aluno: "));
 		String curso = JOptionPane.showInputDialog("Qual o curso do aluno: ");
 		int ra = Integer.parseInt(JOptionPane.showInputDialog("Qual é o ra do aluno: "));
-
 		
-		//Criação do objeto do aluno
-		Aluno aluno = new Aluno();
+		String materia1 = JOptionPane.showInputDialog("Qual materia: ");
+		double nota1 = Double.parseDouble(JOptionPane.showInputDialog("NOTA 1: "));
+
+		String materia2 = JOptionPane.showInputDialog("Qual materia: ");
+		double nota2 = Double.parseDouble(JOptionPane.showInputDialog("NOTA 2: "));
+		
+		String materia3 = JOptionPane.showInputDialog("Qual materia: ");
+		double nota3 = Double.parseDouble(JOptionPane.showInputDialog("NOTA 3: "));
+		
+		String materia4 = JOptionPane.showInputDialog("Qual materia: ");
+		double nota4 = Double.parseDouble(JOptionPane.showInputDialog("NOTA 4: "));
+		
 		aluno.setNome(nome);
 		aluno.setIdade(idade);
 		aluno.setCurso(curso);
 		aluno.setRa(ra);
 		
-		for(int pos = 1; pos <= 4; pos++) {
-			String nomeMateria = JOptionPane.showInputDialog("Qual o nome da materia " + pos + ": ");
-			String notaMateria = JOptionPane.showInputDialog("Qual nota: ");
-			
-			Materia materia = new Materia();
-			
-			materia.setMateria(nomeMateria);
-			materia.setNota(Double.valueOf(notaMateria));
-			
-			aluno.getMaterias().add(materia);
-		}
 		
-		//Remover materia
-		int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma matéria ?");
-		if (escolha == 0) {
-			String materiaRemover = JOptionPane.showInputDialog("Qual a materia? entre as 4");
-			aluno.getMaterias().remove(Integer.valueOf(materiaRemover).intValue() - 1);
-		}
+		
 		
 		//Saída dos dados
 		System.out.println("Nome: " + aluno.getNome());
 		System.out.println("Idade: " + aluno.getIdade());
 		System.out.println("Curso: " + aluno.getCurso());
 		System.out.println("RA: " + aluno.getRa());
-		System.out.println("Situção: " + aluno.getAlunoAprovado());
+		System.out.println("Situção: " + (aluno.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
 		System.out.println("Media aluno: " + aluno.getMediaAluno());
 		System.out.println("------------------------------------------------------------------");
 		System.out.println(aluno); 

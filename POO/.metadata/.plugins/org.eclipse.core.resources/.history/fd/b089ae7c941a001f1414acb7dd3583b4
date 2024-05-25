@@ -59,23 +59,15 @@ public class Aluno {
 	
 	
 	public double getMediaAluno() {
-		
-		double somaNotas = 0.0;
-		for (Materia materia : materias) {
-			somaNotas = somaNotas +  materia.getNota();
-		}
-		
-		return somaNotas / materias.size();
+		return 0;
 	}
 	
-	public String getAlunoAprovado() {
+	public boolean getAlunoAprovado() {
 		double media = this.getMediaAluno();
 		if(media >= 7) {
-			return "Aluno aprovado";
-		} else if(media >= 5 && media < 7) {
-			return "Aluno em recuperação";
+			return true;
 		} else {
-			return "Reprovado";
+			return false;
 		}
 	}
 

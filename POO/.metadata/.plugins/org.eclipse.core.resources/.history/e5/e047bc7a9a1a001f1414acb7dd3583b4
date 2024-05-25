@@ -34,7 +34,6 @@ public class MetodoExecutavel {
 			aluno.getMaterias().add(materia);
 		}
 		
-		//Remover materia
 		int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma matéria ?");
 		if (escolha == 0) {
 			String materiaRemover = JOptionPane.showInputDialog("Qual a materia? entre as 4");
@@ -46,7 +45,7 @@ public class MetodoExecutavel {
 		System.out.println("Idade: " + aluno.getIdade());
 		System.out.println("Curso: " + aluno.getCurso());
 		System.out.println("RA: " + aluno.getRa());
-		System.out.println("Situção: " + aluno.getAlunoAprovado());
+		System.out.println("Situção: " + (aluno.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
 		System.out.println("Media aluno: " + aluno.getMediaAluno());
 		System.out.println("------------------------------------------------------------------");
 		System.out.println(aluno); 

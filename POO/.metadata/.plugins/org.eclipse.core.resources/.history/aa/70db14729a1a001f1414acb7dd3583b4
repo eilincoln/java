@@ -75,7 +75,7 @@ public class Aluno {
 		} else if(media >= 5 && media < 7) {
 			return "Aluno em recuperação";
 		} else {
-			return "Reprovado";
+			return "Reprovado"
 		}
 	}
 
