@@ -1,23 +1,19 @@
 package classes;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Aluno {
 	private String nome;
 	private int idade;
 	private String curso;
 	private int ra;
 
-	private List<Materia> materias = new ArrayList<Materia>();
-	
+	private Materia materia = new Materia();
 
-	public List<Materia> getMaterias() {
-		return materias;
+	public Materia getMateria() {
+		return materia;
 	}
 
-	public void setMaterias(List<Materia> materias) {
-		this.materias = materias;
+	public void setMateria(Materia materia) {
+		this.materia = materia;
 	}
 
 	public Aluno() {
@@ -59,7 +55,7 @@ public class Aluno {
 	
 	
 	public double getMediaAluno() {
-		return 0;
+		return (materia.getNota1() + materia.getNota2() + materia.getNota3() + materia.getNota4()) / 4;
 	}
 	
 	public boolean getAlunoAprovado() {
@@ -73,7 +69,8 @@ public class Aluno {
 
 	@Override
 	public String toString() {
-		return "Aluno [nome=" + nome + ", idade=" + idade + ", curso=" + curso + ", ra=" + ra + "]";
+		return "Aluno [nome=" + nome + ", idade=" + idade + ", curso=" + curso + ", ra=" + ra + ", materia=" + materia
+				+ "]";
 	}
 
 	@Override

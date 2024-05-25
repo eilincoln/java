@@ -10,15 +10,7 @@ public class Aluno {
 	private int ra;
 
 	private List<Materia> materias = new ArrayList<Materia>();
-	
 
-	public List<Materia> getMaterias() {
-		return materias;
-	}
-
-	public void setMaterias(List<Materia> materias) {
-		this.materias = materias;
-	}
 
 	public Aluno() {
 		// TODO Auto-generated constructor stub

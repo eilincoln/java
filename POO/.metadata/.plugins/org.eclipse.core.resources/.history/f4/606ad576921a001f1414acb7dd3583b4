@@ -52,7 +52,6 @@ public class Materia {
 		return true;
 	}
 
-	/*to string*/
 	@Override
 	public String toString() {
 		return "Materia [nota=" + nota + ", materia=" + materia + "]";

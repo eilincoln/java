@@ -4,7 +4,6 @@ public class Materia {
 	private double nota;
 	private String materia;
 
-	/*set e get*/
 	public double getNota() {
 		return nota;
 	}
@@ -21,7 +20,6 @@ public class Materia {
 		this.materia = materia;
 	}
 
-	/*hasCode*/
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -52,7 +50,6 @@ public class Materia {
 		return true;
 	}
 
-	/*to string*/
 	@Override
 	public String toString() {
 		return "Materia [nota=" + nota + ", materia=" + materia + "]";

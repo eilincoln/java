@@ -1,0 +1,9 @@
+package classes;
+
+public class Materia {
+	private double nota1;
+	private String materia1;
+	
+	
+	
+}
